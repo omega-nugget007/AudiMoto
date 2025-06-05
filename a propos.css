@@ -15,7 +15,12 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
+  background-image: url("audi\ fond\ ecran.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0px;
 }
+
 body {
   opacity: 1; /* La page est visible par défaut */
   transition: opacity 0.8s ease-in-out;

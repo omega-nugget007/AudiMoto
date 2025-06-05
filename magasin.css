@@ -14,7 +14,11 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 0;  
+  background-image: url("audi\ fond\ ecran.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0px;
 }
 body {
   opacity: 1; /* La page est visible par défaut */
@@ -217,18 +221,6 @@ p {
   color: #ff4d4d;
 }
 
-/* Fond animé */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(120deg, #ff4d4d, #000000);
-    background-size: 200% 200%;
-    animation: gradientShift 15s ease infinite;
-    color: #333;
-    text-align: center;
-    padding: 30px;
-}
-
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -249,6 +241,8 @@ li {
 .fade.show {
   opacity: 1;
 }
+
+
 
 
 

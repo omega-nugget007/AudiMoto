@@ -9,12 +9,13 @@
 
 body {
 
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+
+
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
+  background: radial-gradient(circle, #ce1717, #000000);
 }
 
 body {
@@ -225,16 +226,14 @@ li {
   margin: 50px auto;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-
-  /* transition fluide */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px rgb(0, 0, 0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
 }
 
 /* Effet au survol */
 .case:hover {
-  transform: scale(1.05); /* agrandit légèrement */
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* ombre plus forte */
+  transform: scale(1.15); /* agrandit légèrement */
+  box-shadow: 0 0 60px rgb(0, 26, 255); /* ombre plus forte */
 }
 
 /* Masque la page au chargement */
@@ -248,6 +247,8 @@ li {
   opacity: 1;
 }
 
+
+    
 
 
 

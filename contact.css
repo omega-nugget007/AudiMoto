@@ -14,7 +14,8 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 0;  
+  background: radial-gradient(circle, #000000, #d11919);
 }
 body {
   opacity: 1; /* La page est visible par défaut */
@@ -229,20 +230,18 @@ li {
   color: #ff4d4d;
 }
 
-iframe {
-  border: #000000;
-  border-radius: 30px;
-}
+
 
 form {
   border-radius: 30px;
   width: 500px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
 }
 
 form:hover {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-  color: white;
+  box-shadow: 0 0 100px rgb(0, 17, 255);
+  color: rgb(255, 255, 255);
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -257,6 +256,12 @@ form:hover {
 .fade.show {
   opacity: 1;
 }
+
+.iframe-border {
+  border-radius: 10px;
+  box-shadow: 0 0 100px rgb(0, 0, 0);
+}
+
 
 
 

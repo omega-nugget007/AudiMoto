@@ -8,12 +8,28 @@
 
 
 body {
+
   background-color: var(--secondary-color);
   color: var(--text-color);
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
+}
+
+body {
+  opacity: 1; /* La page est visible par défaut */
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Au chargement, elle apparaîtra progressivement */
+body.loaded {
+  opacity: 1;
+}
+
+/* Effet de disparition avant de quitter la page */
+body.fade-out {
+  opacity: 0;
 }
 
 
@@ -219,6 +235,17 @@ li {
 .case:hover {
   transform: scale(1.05); /* agrandit légèrement */
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* ombre plus forte */
+}
+
+/* Masque la page au chargement */
+.fade {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+/* Une fois la page chargée */
+.fade.show {
+  opacity: 1;
 }
 
 

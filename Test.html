@@ -21,6 +21,30 @@
   <iframe width="600" height="350" src="https://www.youtube.com/embed/B6td2Fd0yWo" frameborder="0" allowfullscreen></iframe>
   <h2> (en rupture de stock)</h2>
 
+<script>document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("loaded"); // Ajoute la classe pour rendre la page visible en fondu
+});
+
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    let url = this.href;
+    document.body.style.opacity = 0; // Applique l’effet de disparition
+    setTimeout(() => {
+      window.location.href = url;
+    }, 800); // Change de page après 800ms
+  });
+});
+</script>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    document.body.classList.add("loaded"); // Ajoute la classe pour afficher la page
+  }, 100); // Petit délai pour éviter un bug d'affichage
+});
+</script>
+
+
 
   
 

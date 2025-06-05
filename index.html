@@ -23,12 +23,33 @@
   </header>
 
   <h5>Ce site à été conçu par Maxime Poreye.
-    Plusieurs ligne de code ont été générées par IA pour le début de la création et pour les animations complexes.
+    Plusieurs ligne de code ont été générées par IA pour le début de la création, pour les animations complexes et les scripts.
     Il pourrait avoir des lignes de code en CSS parfois inutiles pour la page HTML associé.
+    Ce site a été aussi publié sur GitHub, voici le lien d'accès : https://omega-nugget007.github.io/AudiMoto/
     Merci de votre compréhension.
   </h5>
+<script>document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("loaded"); // Ajoute la classe pour rendre la page visible en fondu
+});
 
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    let url = this.href;
+    document.body.style.opacity = 0; // Applique l’effet de disparition
+    setTimeout(() => {
+      window.location.href = url;
+    }, 800); // Change de page après 800ms
+  });
+});
+</script>
 
+<script>document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    document.body.classList.add("loaded"); // Ajoute la classe pour afficher la page
+  }, 100); // Petit délai pour éviter un bug d'affichage
+});
+</script>
 
 
 

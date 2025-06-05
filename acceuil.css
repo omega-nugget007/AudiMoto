@@ -8,14 +8,32 @@
 
 
 body {
-  background-color: var(--secondary-color);
   color: var(--text-color);
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
+  /*partie pour mettre une image en fond*/
+  background-image: url("audi\ fond\ ecran.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0px;
 }
 
+body {
+  opacity: 1; /* La page est visible par défaut */
+  transition: opacity 0.8s ease-in-out; /* Effet fluide */
+}
+
+/* Ajout d'une classe qui démarre avec une opacité à 0 et qui s'anime */
+body.fade-out {
+  opacity: 0;
+}
+
+/* Une fois la page chargée, elle devient visible */
+body.loaded {
+  opacity: 1;
+}
 
 .container {
   width: 80%;
@@ -197,6 +215,7 @@ p {
 li {
   color: #ff4d4d;
 }
+
 
 
 

@@ -190,6 +190,7 @@ ul {
   padding: 0;
   color: #ff4d4d;
   font-size: large;
+  font-style: var(--primary-color);
 }
 
 li {

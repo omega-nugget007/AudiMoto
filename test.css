@@ -217,28 +217,42 @@ li {
 
 .case {
   padding: 20px;
-  background-color: white;
-  width: 600px;
+  background-color: rgb(255, 255, 255);
+  width: 500px;
   margin: 50px auto;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-
-
-
-
-
-
-  /* transition fluide */
+  box-shadow: 0 0 20px rgb(255, 255, 255);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Effet au survol */
 .case:hover {
-  transform: scale(1.05); /* agrandit légèrement */
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* ombre plus forte */
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgb(255, 0, 0);
 }
 
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #ff4d4d;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.fixed-button:hover {
+  transform: scale(1.05); /* agrandit légèrement */
+  box-shadow: 0 0 30px rgb(255, 255, 255); /* ombre plus forte */
+}
 
 
 

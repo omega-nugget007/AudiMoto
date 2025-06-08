@@ -236,7 +236,7 @@ form {
   border-radius: 30px;
   width: 500px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  
+  margin-bottom: 500px;
 }
 
 form:hover {
@@ -261,6 +261,14 @@ form:hover {
   border-radius: 10px;
   box-shadow: 0 0 100px rgb(0, 0, 0);
 }
+
+
+
+
+
+
+
+
 
 
 

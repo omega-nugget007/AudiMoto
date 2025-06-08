@@ -22,6 +22,28 @@
   <img src="image concess.webp" width="400" height="300">
   <img src="image concess2.webp" width="400" height="300">
 
+
+         <div class="case">
+  
+    <h2>Les avis clients les plus récents</h2>
+    <center><p>🌟 Marie L. "Un accueil chaleureux et des produits de qualité ! J'ai adoré découvrir ce magasin et je reviendrai sans hésiter. Mention spéciale pour le service client au top !"</p>
+
+<p>🌟 Julien B. "Service rapide et efficace. J'ai trouvé exactement ce que je cherchais et à un prix très raisonnable. Une belle découverte !"</p>
+
+<p>🌟 Sophie D. "Les conseils étaient vraiment utiles et personnalisés. On sent que l'équipe connaît bien ses produits et prend le temps d'expliquer. Super expérience !"</p>
+
+<p>🌟 Antoine R. "Une ambiance agréable et un large choix de produits. Je recommande à tous ceux qui cherchent un commerce de proximité avec une vraie valeur ajoutée !"</p>
+
+<p>🌟 Camille M. "Je suis fan ! La qualité est au rendez-vous et les nouveautés sont toujours intéressantes. Un incontournable pour moi."</p></center>
+
+  </div>
+
+  <div class="promo-banner">
+    <p>🔥 Offre spéciale : -30% sur la Audi Q3 jusqu'à <span id="countdown"></span> ! 🔥</p>
+    <button onclick="window.location.href='modèles plus grand.html#audi Q3'">Profitez-en</button>
+</div>
+
+
 <script>document.addEventListener("DOMContentLoaded", function () {
   document.body.classList.add("loaded"); // Ajoute la classe pour rendre la page visible en fondu
 });
@@ -44,6 +66,46 @@ document.querySelectorAll("a").forEach(link => {
   }, 100); // Petit délai pour éviter un bug d'affichage
 });
 </script>
+
+<script>
+function startCountdown() {
+    let countdownElement = document.getElementById("countdown");
+
+    // Vérifie si une date est déjà enregistrée dans le stockage local
+    let deadline = localStorage.getItem("deadline");
+    
+    if (!deadline) {
+        // Si aucune date n'est stockée, on la définit pour dans 2 semaines, 1 jour, 5h, 6m, 45s
+        let now = new Date().getTime();
+        deadline = now + (14 * 24 * 60 * 60 * 1000) + (1 * 24 * 60 * 60 * 1000) + (5 * 60 * 60 * 1000) + (6 * 60 * 1000) + (45 * 1000);
+        localStorage.setItem("deadline", deadline); // Stocke la date de fin
+    }
+
+    let x = setInterval(function() {
+        let now = new Date().getTime();
+        let timeLeft = deadline - now;
+
+        let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = days + "j " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (timeLeft < 0) {
+            clearInterval(x);
+            countdownElement.innerHTML = "Expiré";
+            localStorage.removeItem("deadline"); // Supprime la date une fois expirée
+        }
+    }, 1000);
+}
+
+startCountdown();
+</script>
+
+
+
+
 
 
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement Factice</title>
+    <link rel="stylesheet" href="paiement.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Faux paiement (Ne donnez aucune information sensible) </h2>
+        <form id="payment-form">
+            <label>Nom sur la carte :</label>
+            <input type="text" required>
+
+            <label>Numéro de carte :</label>
+            <input type="text" maxlength="16" required>
+
+            <label>Date d’expiration :</label>
+            <input type="text" placeholder="MM/AA" required>
+
+            <label>Code CVV :</label>
+            <input type="text" maxlength="3" required>
+
+            <button type="submit">Payer</button>
+        </form>
+        <p id="confirmation-message"></p>
+
+        <h5>Ce paiement est une simulation. Aucune transaction réelle ne sera réalisée.</h5>
+    </div>
+
+    <script src="script.js"></script>
+
+      <a href="Prix.html" class="fixed-button">Plus envie de payer</a>
+
+
+</body>
+</html>
